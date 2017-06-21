@@ -46,10 +46,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.universal5420
 
-# Samsung Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
