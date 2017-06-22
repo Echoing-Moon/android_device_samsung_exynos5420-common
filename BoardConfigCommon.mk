@@ -111,9 +111,6 @@ WITH_DEXPREOPT_BOOT_IMG_ONLY := true
 # Disable journaling on system.img to save space
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
 
-# Unified PowerHAL
-TARGET_POWERHAL_VARIANT := samsung
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.universal5420
 TARGET_USERIMAGES_USE_EXT4 := true
