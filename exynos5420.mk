@@ -145,7 +145,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sensors.universal5420
 
-# Wifi
+# WiFi HAL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
