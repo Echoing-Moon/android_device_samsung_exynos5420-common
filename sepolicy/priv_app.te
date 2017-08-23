@@ -1,2 +1,0 @@
-allow priv_app self:udp_socket ioctl;
-allow priv_app device:dir { read open };
