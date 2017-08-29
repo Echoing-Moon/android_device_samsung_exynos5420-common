@@ -28,7 +28,9 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    tinymix
+    tinymix \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -54,7 +56,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libion \
     gralloc.exynos5 \
-    libgutils
+    libgutils \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl
 
 # IR
 PRODUCT_PACKAGES += \
@@ -68,7 +74,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.universal5420
+    lights.universal5420 \
+    android.hardware.light@2.0-impl
 
 # Media profile
 PRODUCT_COPY_FILES += \
@@ -127,7 +134,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.universal5420
+    power.universal5420 \
+    android.hardware.power@1.0-impl
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -143,23 +151,30 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.universal5420
+    sensors.universal5420 \
+    android.hardware.sensors@1.0-impl
+
+# Vibrator HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl 
+
+# USB HAL
+PRODUCT_PACKAGES += \
+	android.hardware.usb@1.0-service
 
 # WiFi HAL
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
-
-PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd \
     hostapd_default.conf \
     libwpa_client \
 	wificond \
     wpa_supplicant
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
